@@ -1,13 +1,10 @@
 # FruityTooty
 
-One line pitch/description of project
+This project will be based around nutrition and fruits specifically and the various information that can be obtained from the api. 
+So for this project, we’ll Include fruit infomation such as calories, what its name is, what Family and Genus it belongs to among other things. 
 
-	Create an informational site on fruit nutrition. 
------OR-------
-	Can set it up as a fruit delivery subscription service and create website so that user can customize their fruit delivery order.
+The challenges that might come up are Unexpected errors and having to work through that, along with bringing together all of the functionality of the site and making it work. 
 
-User Stories
-
-	-As a user, I would like to be able to see all of the fruits and its nutrition information in the database/JSON object when I refresh the page.
-	-As a user, I would like to be able to click a button so that I can indicate that I like the fruit and save it.
-	-As a user, I would like to be able to click a button so that I can indicate that I do not like the fruit and would like it to be removed from the web page.
+Core features of this site are that once a button is clicked, it would indicate that I liked the fruit and save it.
+Also, you can click a button and indicate that you do not like that specific fruit and want it to be removed from the page. 
+Finally, you would be able to see all of the fruits and the nutrition information in the database/JSON object when the page is refreshed.
