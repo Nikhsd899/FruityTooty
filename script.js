@@ -2,22 +2,23 @@ const url = "http://localhost:3000/fruitData";
 // data in db.json is originally from https://www.fruityvice.com/api/fruit/all
 const fruitCardContainer = document.querySelector("div#fruitCardContainer");
 
-window.addEventListener("DOMContentLoaded", () => {
+// window.addEventListener("DOMContentLoaded", () => {
   //GET FRUIT DATA
   fetch(url)
   .then(res => res.json())
   .then(fruitData => {
+    console.log("FRUIT DATA", fruitData);
     fruitData.forEach(fruit => { //fruit is the fruit obj with name, genus, nutrition, etc.
-      renderFilterBar(fruit);
+      // renderFilterBar(fruit);
       renderFruitCards(fruit);
     })
   })
   .catch(error => {
     console.log("ERROR", error);
   });
-})
+// })
 
-function renderFilterBar(fruit) {};
+// function renderFilterBar(fruit) {};
 
 function renderFruitCards(fruit) {
   const fruitCardContainer = document.querySelector("div#fruitCardContainer");
