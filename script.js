@@ -7,7 +7,6 @@ window.addEventListener("DOMContentLoaded", () => {
   fetch(url)
   .then(res => res.json())
   .then(fruitData => {
-    console.log("FRUIT DATA", fruitData);
     fruitData.forEach(fruit => { //fruit is the fruit obj with name, genus, nutrition, etc.
       renderFilterBar(fruit);
       renderFruitCards(fruit);
@@ -19,9 +18,9 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 function renderFilterBar(fruit) {
-  const genus = document.querySelector("div#genusFilter");
-  const family = document.querySelector("div#familyFilter");
-  const order = document.querySelector("div#orderFilter");
+  const genusDiv = document.querySelector("div#genusFilterOptions");
+  const familyDiv = document.querySelector("div#familyFilterOptions");
+  const orderDiv = document.querySelector("div#orderFilterOptions");
   let genusOption = document.createElement("a");
   let familyOption = document.createElement("a");
   let orderOption = document.createElement("a");
@@ -29,9 +28,11 @@ function renderFilterBar(fruit) {
   let fruitInfo = {genus: {}, family: {}, order: {}};
     //populate fruitInfo
     // fruit.
-    console.log("FRUIT INFO", fruitInfo.genus);
+
+    console.log("FRUIT INFO", fruit.genus);
 
   //RENDER FILTER DROP DOWNLIST
+  genusDiv.append(`<a>TEST</a>`);
 };
 
 function renderFruitCards(fruit) {
