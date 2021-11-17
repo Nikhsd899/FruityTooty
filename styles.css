@@ -16,6 +16,7 @@ color pallette:
 
 * {
   font-family: Arial;
+  /* background-color: black; */
 }
 
 img#logo {
@@ -31,6 +32,24 @@ div#filterBar {
   width: 100%;
 }
 
+#fruitCard {
+  border-style: solid;
+  border-width: 0.5px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+  width: 200px;
+  height: 420px;
+  padding: 30px auto;
+}
+
+.fruitImg {
+  height: 200px;
+  width: 200px;
+  /* border-style: solid; */
+}
+
 div#likeDeleteBar {
   /* background-color: green; */
   display: flex;
@@ -41,18 +60,6 @@ div#likeDeleteBar {
 
 .likeDeleteIcons {
   color: #49c5f2;
-}
-
-#fruitCard {
-  border-style: solid;
-  border-width: 0.5px;
-  border-radius: 10px;
-  display: inline-block;
-  text-align: center;
-  margin: 20px;
-  width: 200px;
-  height: 215px;
-  padding: 30px auto;
 }
 
 #fruitCardContainer {

@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
   fetch(url)
   .then(res => res.json())
   .then(fruitData => {
-    // console.log("FRUIT DATA", fruitData);
+    console.log("FRUIT DATA", fruitData);
     fruitData.forEach(fruit => { //fruit is the fruit obj with name, genus, nutrition, etc.
       renderFilterBar(fruit);
       renderFruitCards(fruit);
@@ -43,6 +43,11 @@ function renderFruitCards(fruit) {
   const fruitName = document.createElement("h2");
     fruitName.textContent = fruit.name;
     fruitCard.append(fruitName);
+  //Fruit Image
+  const fruitImg = document.createElement("img");
+    fruitImg.className = "fruitImg";
+    fruitImg.src = "./images/"+fruit.name+".png";
+    fruitCard.append(fruitImg);
   //Fruit Nutrition
   const nutrition = document.createElement("div");
     //Calories, Carbohydrates, Sugar, Protein, & Fats
