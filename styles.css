@@ -36,7 +36,11 @@ div#likeDeleteBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px;
+  padding: 10px 25px;
+}
+
+.likeDeleteIcons {
+  color: #49c5f2;
 }
 
 #fruitCard {
@@ -47,12 +51,8 @@ div#likeDeleteBar {
   text-align: center;
   margin: 20px;
   width: 200px;
-  height: 205px;
+  height: 215px;
   padding: 30px auto;
-}
-
-.likeDeleteIcons {
-  color: #49c5f2;
 }
 
 #fruitCardContainer {

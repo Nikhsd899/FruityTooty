@@ -65,6 +65,15 @@ function renderFruitCards(fruit) {
       deleteIcon.id = "deleteIcon";
       deleteIcon.className = "likeDeleteIcons";
       deleteIcon.textContent = "✖";
+    //event listeners
+    likeIcon.addEventListener("click", () => {
+      console.log("LIKE ICON clicked!");
+    });
+
+    deleteIcon.addEventListener("click", () => {
+      console.log("DELETE ICON clicked!");
+      fruitCard.remove();
+    });
     
     likeDelete.append(likeIcon, deleteIcon);
   fruitCard.append(likeDelete);
