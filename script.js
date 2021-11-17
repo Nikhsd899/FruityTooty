@@ -46,7 +46,7 @@ function renderFruitCards(fruit) {
   //Fruit Image
   const fruitImg = document.createElement("img");
     fruitImg.className = "fruitImg";
-    fruitImg.src = "./images/"+fruit.name+".png";
+    fruitImg.src = `./images/${fruit.name}.png`;
     fruitCard.append(fruitImg);
   //Fruit Nutrition
   const nutrition = document.createElement("div");
@@ -85,8 +85,6 @@ function renderFruitCards(fruit) {
     likeDelete.append(likeIcon, deleteIcon);
   fruitCard.append(likeDelete);
   
-
-
   //put fruitCard into container
   fruitCardContainer.append(fruitCard);
 };
