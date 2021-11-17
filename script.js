@@ -22,12 +22,16 @@ function renderFilterBar(fruit) {
   const genus = document.querySelector("div#genusFilter");
   const family = document.querySelector("div#familyFilter");
   const order = document.querySelector("div#orderFilter");
-  //render Genus filter
   let genusOption = document.createElement("a");
-    
-  //render Family filter
+  let familyOption = document.createElement("a");
+  let orderOption = document.createElement("a");
+  //FIND UNIQUE FILTER VALUES
+  let fruitInfo = {genus: {}, family: {}, order: {}};
+    //populate fruitInfo
+    // fruit.
+    console.log("FRUIT INFO", fruitInfo.genus);
 
-  //render Order filter
+  //RENDER FILTER DROP DOWNLIST
 };
 
 function renderFruitCards(fruit) {
@@ -45,10 +49,10 @@ function renderFruitCards(fruit) {
     nutrition.innerHTML = `
       <b>Nutrition</b><br>
       Calories: ${fruit.nutritions.calories}<br>
+      Fats: ${fruit.nutritions.fat}<br>
       Carbohydrates: ${fruit.nutritions.carbohydrates}<br>
       Sugar: ${fruit.nutritions.sugar}<br>
       Protein: ${fruit.nutritions.protein}<br>
-      Fats: ${fruit.nutritions.fat}<br>
     `;
     fruitCard.append(nutrition);
 
@@ -57,19 +61,16 @@ function renderFruitCards(fruit) {
     likeDelete.id = "likeDeleteBar";
     //like icon
     const likeIcon = document.createElement("div");
-    likeIcon.id = "likeIcon";
       likeIcon.className = "likeDeleteIcons";
       likeIcon.textContent = "♡"; // ♥
     //delete icon
     const deleteIcon = document.createElement("div");
-      deleteIcon.id = "deleteIcon";
       deleteIcon.className = "likeDeleteIcons";
       deleteIcon.textContent = "✖";
     //event listeners
     likeIcon.addEventListener("click", () => {
       fruitCard.style.borderColor = "#f27649";
       fruitCard.style.borderWidth = "5px";
-
     });
 
     deleteIcon.addEventListener("click", () => {
