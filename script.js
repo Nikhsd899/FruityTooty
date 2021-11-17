@@ -67,7 +67,6 @@ function renderFruitCards(fruit) {
       deleteIcon.textContent = "✖";
     //event listeners
     likeIcon.addEventListener("click", () => {
-      console.log("LIKE ICON clicked!");
       fruitCard.style.borderColor = "#f27649";
       fruitCard.style.borderWidth = "5px";
 
