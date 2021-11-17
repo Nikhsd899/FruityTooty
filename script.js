@@ -53,21 +53,24 @@ function renderFruitCards(fruit) {
     fruitCard.append(nutrition);
 
   //Like/Delete Fruit
-    //created heart icon
+  const likeDelete = document.createElement("div");
+    likeDelete.id = "likeDeleteBar";
+    //like icon
+    const likeIcon = document.createElement("div");
+    likeIcon.id = "likeIcon";
+      likeIcon.className = "likeDeleteIcons";
+      likeIcon.textContent = "♡"; // ♥
+    //delete icon
+    const deleteIcon = document.createElement("div");
+      deleteIcon.id = "deleteIcon";
+      deleteIcon.className = "likeDeleteIcons";
+      deleteIcon.textContent = "✖";
+    
+    likeDelete.append(likeIcon, deleteIcon);
+  fruitCard.append(likeDelete);
+  
 
-      //add event listener
-      // heartIconName.addEventListener("click", (event) => {
-      //   event.preventDefault();
-      //   //thing to do when heart icon is clicked.
-        
-      // });
 
-
-
-
-    //append to 
-    // fruitCard.append();
-
-  //end
+  //put fruitCard into container
   fruitCardContainer.append(fruitCard);
 };

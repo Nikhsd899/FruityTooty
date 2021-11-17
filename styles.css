@@ -31,6 +31,14 @@ div#filterBar {
   width: 100%;
 }
 
+div#likeDeleteBar {
+  /* background-color: green; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
 #fruitCard {
   border-style: solid;
   border-width: 0.5px;
@@ -39,8 +47,12 @@ div#filterBar {
   text-align: center;
   margin: 20px;
   width: 200px;
-  height: 250px;
+  height: 205px;
   padding: 30px auto;
+}
+
+.likeDeleteIcons {
+  color: #49c5f2;
 }
 
 #fruitCardContainer {
