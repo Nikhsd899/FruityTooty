@@ -7,33 +7,61 @@ window.addEventListener("DOMContentLoaded", () => {
   fetch(url)
   .then(res => res.json())
   .then(fruitData => {
+    const genusDiv = document.querySelector("div#genusFilterOptions");
+    const familyDiv = document.querySelector("div#familyFilterOptions");
+    const orderDiv = document.querySelector("div#orderFilterOptions");
+    let genusList = {};
+    let familyList = {};
+    let orderList = {};
+
     fruitData.forEach(fruit => { //fruit is the fruit obj with name, genus, nutrition, etc.
-      renderFilterBar(fruit);
+      if (genusList[fruit.genus] === undefined) {
+        genusList[fruit.genus] = 0;
+      } else {
+        genusList[fruit.genus]++;
+      }
+
+      if (familyList[fruit.family] === undefined) {
+        familyList[fruit.family] = 0;
+      } else {
+        familyList[fruit.family]++;
+      }
+
+      if (orderList[fruit.order] === undefined) {
+        orderList[fruit.order] = 0;
+      } else {
+        orderList[fruit.order]++;
+      }
+
       renderFruitCards(fruit);
     })
+    
+    Object.keys(genusList).forEach(genus => {
+      let div = document.createElement("a");
+        div.textContent = genus;
+        genusDiv.append(div);
+    })
+
+    Object.keys(familyList).forEach(family => {
+      let div = document.createElement("a");
+        div.textContent = family;
+        familyDiv.append(div);
+    })
+
+    Object.keys(orderList).forEach(order => {
+      let div = document.createElement("a");
+        div.textContent = order;
+        orderDiv.append(div);
+    })
+    
+
+
+
   })
   .catch(error => {
     console.log("ERROR", error);
   });
 })
-
-function renderFilterBar(fruit) {
-  const genusDiv = document.querySelector("div#genusFilterOptions");
-  const familyDiv = document.querySelector("div#familyFilterOptions");
-  const orderDiv = document.querySelector("div#orderFilterOptions");
-  let genusOption = document.createElement("a");
-  let familyOption = document.createElement("a");
-  let orderOption = document.createElement("a");
-  //FIND UNIQUE FILTER VALUES
-  let fruitInfo = {genus: {}, family: {}, order: {}};
-    //populate fruitInfo
-    // fruit.
-
-    console.log("FRUIT INFO", fruit.genus, fruit.family, fruit.order);
-
-  //RENDER FILTER DROP DOWNLIST
-  genusDiv.append(`<a>TEST</a>`);
-};
 
 function renderFruitCards(fruit) {
   const fruitCardContainer = document.querySelector("div#fruitCardContainer");
