@@ -3,13 +3,13 @@ const url = "http://localhost:3000/fruitData";
 const fruitCardContainer = document.querySelector("div#fruitCardContainer");
 
 window.addEventListener("DOMContentLoaded", () => {
-  //GET FRUIT DATA
+  const genusDiv = document.querySelector("div#genusFilterOptions");
+  const familyDiv = document.querySelector("div#familyFilterOptions");
+  const orderDiv = document.querySelector("div#orderFilterOptions");
+
   fetch(url)
   .then(res => res.json())
   .then(fruitData => {
-    const genusDiv = document.querySelector("div#genusFilterOptions");
-    const familyDiv = document.querySelector("div#familyFilterOptions");
-    const orderDiv = document.querySelector("div#orderFilterOptions");
     let genusList = {};
     let familyList = {};
     let orderList = {};
@@ -33,7 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
         orderList[fruit.order]++;
       }
 
-      renderFruitCards(fruit);
+      // renderFruitCards(fruit);
     })
     
     Object.keys(genusList).forEach(genus => {
@@ -53,9 +53,6 @@ window.addEventListener("DOMContentLoaded", () => {
         div.textContent = order;
         orderDiv.append(div);
     })
-    
-
-
 
   })
   .catch(error => {
