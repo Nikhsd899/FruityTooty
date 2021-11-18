@@ -29,7 +29,7 @@ function renderFilterBar(fruit) {
     //populate fruitInfo
     // fruit.
 
-    console.log("FRUIT INFO", fruit.genus);
+    console.log("FRUIT INFO", fruit.genus, fruit.family, fruit.order);
 
   //RENDER FILTER DROP DOWNLIST
   genusDiv.append(`<a>TEST</a>`);
